@@ -1,0 +1,16 @@
+<configuration>
+
+	<timestamp key="timestamp" datePattern="yyyyMMdd'T'HHmmss"/>
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>${log.directory}/index-check-${timestamp}.log</file>
+		<encoder>
+			<pattern>%logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="FILE"/>
+	</root>
+
+</configuration>
